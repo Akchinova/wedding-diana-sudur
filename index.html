@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диана & Судур Тымыевы | 24.10.2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Кнопка музыки -->
+    <button class="music-btn" id="musicToggle">🎵</button>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="media/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Мини-кнопка уведомления -->
+    <button class="info-mini-btn" id="infoMiniBtn" onclick="toggleInfo()"></button>
+    <div class="info-notification" id="infoNotification">
+        <button class="info-close" onclick="closeInfo()">×</button>
+        <p>Хотите такой же сайт?</p>
+        <p class="info-contact">Пишите в ВК Алине! ;)</p>
+        <a href="https://vk.ru/a.vanilopa" target="_blank" class="info-link">Написать →</a>
+    </div>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="pre-title">Мы приглашаем вас на нашу свадьбу</p>
+            <h1 class="main-title">Диана <span class="amp">&</span> Судур</h1>
+            <p class="surname">Тымыевы</p>
+            <div class="ornament-divider">
+                <span class="ornament-symbol">✦</span>
+            </div>
+            <p class="date-main">24 октября 2026</p>
+            <p class="location-main">с. Улаган</p>
+        </div>
+    </section>
+
+    <!-- Приветственный текст -->
+    <section class="welcome-text">
+        <p class="welcome-intro">Дорогие друзья и близкие,</p>
+        <p class="welcome-text-main">С радостью приглашаем вас разделить с нами самый важный день в нашей жизни — день, когда мы станем одной семьёй.</p>
+        <p class="welcome-date">24.10.2026</p>
+    </section>
+
+    <!-- Календарь -->
+    <section class="calendar-section">
+        <div class="calendar-container">
+            <h2 class="calendar-month">октябрь</h2>
+            <div class="calendar-weekdays">
+                <span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span>
+            </div>
+            <div class="calendar-days">
+                <div class="day-empty"></div><div class="day-empty"></div><div class="day-empty"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+                <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div>
+                <div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div>
+                <div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="special-day">24</div><div class="day">25</div>
+                <div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+            </div>
+            <div class="calendar-heart">♥</div>
+        </div>
+    </section>
+
+    <!-- Таймер -->
+    <section class="timer-section">
+        <h2 class="section-title">До нашего дня осталось</h2>
+        <div class="countdown">
+            <div class="time-block">
+                <span class="time-number" id="days">00</span>
+                <span class="time-label">дней</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">часов</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">минут</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">секунд</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание дня -->
+    <section class="schedule-section">
+        <h2 class="section-title">Расписание дня</h2>
+        <div class="schedule-container">
+            <div class="schedule-item">
+                <div class="schedule-time">10:00</div>
+                <div class="schedule-info">
+                    <h3>Алтай той</h3>
+                    <p>с. Улаган, мкр. Мандилу, ул. Карамаева, 73</p>
+                </div>
+            </div>
+            <div class="schedule-divider"></div>
+            <div class="schedule-item">
+                <div class="schedule-time">12:00</div>
+                <div class="schedule-info">
+                    <h3>Регистрация</h3>
+                    <p>с. Улаган, cквер «Семьи»</p>
+                </div>
+            </div>
+            <div class="schedule-divider"></div>
+            <div class="schedule-item">
+                <div class="schedule-time">13:00</div>
+                <div class="schedule-info">
+                    <h3>Свадебный кортеж</h3>
+                    <p>Прогулка и фотосессия</p>
+                </div>
+            </div>
+            <div class="schedule-divider"></div>
+            <div class="schedule-item">
+                <div class="schedule-time">14:00</div>
+                <div class="schedule-info">
+                    <h3>Банкет</h3>
+                    <p>с. Улаган, кафе «Малинка»</p>
+                </div>
+            </div>
+            <div class="schedule-divider"></div>
+            <div class="schedule-item">
+                <div class="schedule-time">21:00</div>
+                <div class="schedule-info">
+                    <h3>Завершение салютом</h3>
+                    <p>Искры нашей любви</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Место проведения -->
+    <section class="venue-section">
+        <h2 class="section-title">Место проведения</h2>
+        <div class="venue-card">
+            <div class="venue-icon">📍</div>
+            <h3>Улаган</h3>
+            <p class="venue-subtitle">с. Улаган, микрорайон Мандилу, ул. Карамаева, 73</p>
+            <a href="https://yandex.ru/maps/?text=с.+Улаган,+микрорайон+Мандилу,+ул.+Карамаева,+73" target="_blank" class="venue-link">
+                🗺️ Открыть на карте →
+            </a>
+        </div>
+    </section>
+
+    <!-- Дресс-код -->
+    <section class="dresscode-section">
+        <h2 class="section-title">Дресс-код</h2>
+        <p class="dresscode-subtitle">Мы будем рады, если ваш наряд будет в оттенках нашей свадебной палитры</p>
+        <div class="color-palette">
+            <div class="color-item">
+                <div class="color-circle" style="background: #5C3D2E;"></div>
+                <span class="color-label">Шоколад</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle" style="background: #8B6F47;"></div>
+                <span class="color-label">Кофе</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle" style="background: #A67B5B;"></div>
+                <span class="color-label">Карамель</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle" style="background: #C49A6C;"></div>
+                <span class="color-label">Ирис</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle" style="background: #C9A96E;"></div>
+                <span class="color-label">Золото</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle" style="background: #D4B896;"></div>
+                <span class="color-label">Беж</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фотопленка -->
+    <section class="photos-gallery">
+        <h2 class="section-title">Мы</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">‹</button>
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="media/photo1.jpg" alt="Фото 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="media/photo2.jpg" alt="Фото 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="media/photo3.jpg" alt="Фото 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="media/photo4.jpg" alt="Фото 4">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">›</button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
+    <!-- Пожелания -->
+    <section class="wishes-section">
+        <h2 class="section-title">Пожелания</h2>
+        <div class="wishes-card">
+            <p>Дорогие близкие и друзья!</p>
+            <p>С любовью приглашаем вас на нашу свадебную церемонию.</p>
+            <p>Приходите с открытым сердцем и хорошим настроением!</p>
+            <p>Пусть этот день будет наполнен улыбками и счастьем!</p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="ornament-divider">
+            <span class="ornament-symbol">✦</span>
+        </div>
+        <h2 class="footer-names">Диана & Судур</h2>
+        <p class="footer-date">24.10.2026</p>
+        <p class="footer-love">С любовью и нетерпением ждём вас!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
